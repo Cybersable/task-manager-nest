@@ -34,6 +34,7 @@ export class TasksController {
   }
 
   @Patch(':id')
+  @UsePipes(new ValidationPipe())
   update(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
     return this.tasksService.update(id, updateTaskDto);
   }

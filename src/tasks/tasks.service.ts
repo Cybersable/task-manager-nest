@@ -24,6 +24,7 @@ export class TasksService {
 
   update(id: string, updateTaskDto: UpdateTaskDto) {
     return this.prisma.task.update({
+      where: { id },
       data: updateTaskDto,
     });
   }
