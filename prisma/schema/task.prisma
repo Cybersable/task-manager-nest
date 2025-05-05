@@ -1,5 +1,5 @@
 model Task {
-  id Int @id @default(autoincrement())
+  id Int @id @default(cuid())
 
   title String
   description String?
